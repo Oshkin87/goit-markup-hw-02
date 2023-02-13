@@ -7,9 +7,23 @@
         --color-light-bg: #F4F4FD;
         --color-bg-button: #404BBF;
 }
-.link {
-        list-style-type: none;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+        margin-top: 0;
+        margin-bottom: 0;
 }
+ul {
+        list-style: none;
+}
+img {
+        display: block;
+        max-width: 100%;
+        height: auto;}
 body {
         color: var(--color-primary);
         font-family: 'Roboto', sans-serif;
@@ -18,6 +32,38 @@ body {
         font-size: 16px;
         letter-spacing: 0.02em;
 }
+.container {
+        
+        max-width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px;
+}
+.header-container {
+        display: flex;
+        align-items: center;
+        height: 72px;
+        width: 100%;
+        border-bottom: 1px solid #E7E9FC;
+}
+.header-nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        gap: 76px;
+}
+.header-link {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+
+}
+.header-menu {
+        display: flex;
+}
+
 /* Логотип */
 .logo-web {
         color: var(--color-brand);
@@ -28,6 +74,10 @@ body {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         text-decoration: none;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 0;
 }
 .logo-dark {
         font-family: 'Raleway',sans-serif;
@@ -55,6 +105,7 @@ body {
         font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        padding: 24px 20px;
         }
 .nav-link:hover,
 .nav-link:focus {
@@ -66,15 +117,22 @@ body {
 
 }
 .address-link {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+}
+.address-menu {
         color: var(--color-primary);
         text-decoration: none;
         font-size: 16px;
         line-height: 1.5;
         font-style: normal;
         letter-spacing: 0.02em;
+        
 }
-.address-link:hover,
-.address-link:focus {
+.address-menu:hover,
+.address-menu:focus {
         color: var(--color-bg-button);
         text-decoration: none;
         font-size: 16px;
@@ -84,6 +142,16 @@ body {
 /* секция герой */
 .hero-section {
         background: var(--color-dark-bg);
+        height: 600px;
+
+}
+.hero-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 600px;
+        
 }
 .hero-title {
 color: var(--color-light);
@@ -91,6 +159,10 @@ font-weight: 700;
 font-size: 56px;
 line-height: 1.07;
 letter-spacing: 0.02em;
+max-width: 496px;
+margin: 0 auto 48px;
+text-align: center;   
+
 }
 .hero-button {
         color: var(--color-light);
@@ -103,6 +175,11 @@ letter-spacing: 0.02em;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px 32px;
+        gap: 10px;
 }
 .hero-button:hover,
 .hero-button:focus{
@@ -113,13 +190,40 @@ letter-spacing: 0.02em;
         border-radius: 4px;
 }
 /* секция слогон! */
+.features-section {
+        padding: 120px 0;
+}
+.features-list {
+        display: flex;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+}
+.features-item {
+        margin-right: 24px;
+
+}
+.description-list{
+        display: flex;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        flex-grow: 1;
+}
+.description-item {
+        margin-bottom: 120px;
+}
 .slogan-title {
         color: var(--color-dark-bg);
         letter-spacing: 0.02em;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
+        margin-bottom: 8px;
 }
+
 /* секция чем занимаются */
 .secondary-title {
         color: var(--color-dark-bg);
@@ -127,10 +231,41 @@ letter-spacing: 0.02em;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
+        text-align: center;
+        margin-bottom: 72px;
 }
+
 /* секция команда */
 .section-team {
         background:var(--color-light-bg);
+        /* height: 732px; */
+}
+.team-title {
+        color: var(--color-dark-bg);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        padding-top: 120px;
+        padding-bottom: 72px;
+}
+.team-link {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 120px;
+        margin: 0;
+        padding-left: 0;
+        
+}
+.team-item {
+        text-align: center;
+        flex-basis: calc((100%/4)-72px);
+        background: #FFFFFF;
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px;
+        
+        
 }
 .team-names {
         color: var(--color-dark-bg);
@@ -138,15 +273,38 @@ letter-spacing: 0.02em;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
+        padding-bottom: 8px;
+}
+.team-text {
+        padding: 32px 0;
 }
 /* подвал */
+.footer-item {
+        width: 264px;
+        padding: 100px 0;
+        margin-left: 156px;
+}
 .footer-back {
         background: var(--color-dark-bg);
+        
 }
 .footer-text {
         color: var(--color-secondary);
+        padding-top: 16px;
 }
 /* секция фильтр */
+.nav-portfolio {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 72px;
+        margin-top: 96px;
+}
+.nav-button {
+        display: flex;
+        gap: 24px;
+        
+}
 .filter-button {
         color: var(--color-brand);
         font-weight: 500;  
@@ -157,6 +315,7 @@ letter-spacing: 0.02em;
         border: 1px solid var(--color-secondary);
         border-radius: 4px;
         cursor: pointer;
+        padding: 12px 24px;
 }
 
 .filter-button:hover,
@@ -173,4 +332,30 @@ letter-spacing: 0.02em;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
+        padding-bottom: 8px;
 }
+.cards {
+        display: flex;
+        flex-direction: column;
+        
+}
+.cards-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        flex-basis: calc(100% / 3 - 48px);
+        padding-bottom: 120px;
+        padding-left: 0;
+        margin: 0;    
+}
+.cards-text {
+        padding: 32px;
+        padding-left: 16px;
+}
+.card {
+        width: 360px;
+        height: 420px;
+        border: 1px solid #E7E9FC;
+        }
+        
